@@ -1,0 +1,42 @@
+<%= form_for(@requerim) do |f| %>
+  <% if @requerim.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@requerim.errors.count, "error") %> prohibited this requerim from being saved:</h2>
+
+      <ul>
+      <% @requerim.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <b># Solicitud:</b>
+    <%= @requerim.solicitud_id %>
+  </p>
+    <%= f.hidden_field :solicitud_id %>
+  <div class="field">
+    # Requerimiento<br />
+    <%= f.text_field :nrequerim, :size => 10 %>
+  </div>
+  <div class="field">
+    Notificado<br />
+    <%= f.text_field :notif_on %>
+  </div>
+  <div class="field">
+    <%= f.label :asunto %><br />
+    <%= f.text_field :asunto, :size => 60%>
+  </div>
+  <div class="field">
+    Vencimiento<br />
+    <%= f.text_field :venc_on %>
+  </div>
+  <div class="field">
+    Respuesta<br />
+    <%= f.text_field :resp_on %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Agregar' %>
+  </div>
+<% end %>

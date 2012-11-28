@@ -1,0 +1,27 @@
+<h1>Catálogo de Impuestos Específicos</h1>
+
+<%= link_to 'Agregar Impuesto Específico', new_impesp_path %>
+<br />
+<br />
+
+<table>
+  <tr>
+    <th>Impuesto Específico</th>
+    <th>Impuesto Genérico</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @impesps.each do |impesp| %>
+  <tr>
+    <td><%= impesp.impesp %></td>
+    <td><%= impesp.impgen2 %></td>
+    <td><%#= link_to 'Show', impesp %></td>
+    <td><%= link_to 'Editar', edit_impesp_path(impesp) %></td>
+    <td><%= link_to 'baja', impesp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+

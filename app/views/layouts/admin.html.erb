@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Sistema de Administración de Devoluciones de Impuestos (SADI) | <%= @page_title || 'Admin Area' %></title>
+    <meta name="author" content="Jesus Garcia">
+    <%= stylesheet_link_tag('public', 'admin', :media => 'all') %>
+    <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css" %>
+    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js" %>
+
+    <script type="text/javascript">
+        $(function (){
+            $('#solicitud_per1_on').datepicker( { dateFormat: "dd MM yy" });
+            $('#solicitud_per2_on').datepicker( { dateFormat: "dd MM yy" });
+            $('#solicitud_ingreso_on').datepicker( { dateFormat: "dd MM yy" });
+            $('#solicitud_devest_on').datepicker( { dateFormat: "dd MM yy" });
+            $('#solicitud_factura_on').datepicker( { dateFormat: "dd MM yy" });
+            $('#requerim_notif_on').datepicker( { dateFormat: "dd MM yy" });
+            $('#requerim_venc_on').datepicker( { dateFormat: "dd MM yy" });
+            $('#requerim_resp_on').datepicker( { dateFormat: "dd MM yy" });
+        });
+    </script>
+  </head>
+  <body>
+    <div id="header">
+      <h1>Sistema de Administración de Devoluciones de Impuestos (SADI)</h1>
+    </div>
+    <div id="main">
+      <% if !flash[:notice].blank? %>
+      <div class="notice">
+        <%= flash[:notice] %>
+      </div>
+      <% end %>
+      <div id="content">
+        <%= yield %>
+      </div>
+    </div>
+    <div id="footer">
+      <p id="copyright">&copy; </p>
+    </div>
+  </body>
+</html>

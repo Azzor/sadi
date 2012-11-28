@@ -1,0 +1,42 @@
+<%= form_for(@cliente) do |f| %>
+  <% if @cliente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
+
+      <ul>
+      <% @cliente.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cliente %><br />
+    <%= f.text_field :cliente, :size => 10 %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre, :size => 40 %>
+  </div>
+  <div class="field">
+    Grupo Empresarial<br />
+    <%= collection_select(:cliente, :gruemp_id, Gruemp.all, :id, :nombre, :prompt => 'sin grupo') %>
+    <%#= f.text_field :gruemp_id %>
+  </div>
+  <div class="field">
+    <%= f.label :contacto %><br />
+    <%= f.text_field :contacto, :size => 40 %>
+  </div>
+  <div class="field">
+    <%= f.label :telefono %><br />
+    <%= f.phone_field :telefono, :size => 20 %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, :size => 60 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

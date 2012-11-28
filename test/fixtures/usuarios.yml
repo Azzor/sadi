@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  usuario: 
+  apepat: 
+  apemat: 
+  nombre: 
+  email: 
+  password: MyString
+
+two:
+  usuario: 
+  apepat: 
+  apemat: 
+  nombre: 
+  email: 
+  password: MyString

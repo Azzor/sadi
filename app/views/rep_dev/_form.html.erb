@@ -1,0 +1,103 @@
+<%= form_for(@solicitud) do |f| %>
+    <% if @solicitud.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@solicitud.errors.count, "error") %> prohibited this solicitud from being saved:</h2>
+
+          <ul>
+            <% @solicitud.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      Grupo Empresarial<br />
+      <%= collection_select(:cliente, :gruemp_id, Gruemp.all, :id, :nombre, :prompt => 'sin grupo') %>
+      <%#= f.text_field :gruemp_id %>
+    </div>
+    <div class="field">
+      <%= f.label :cliente %><br />
+      <%#= f.text_field :cliente %>
+      <%= f.collection_select(:cliente, Cliente.all, :cliente, :nombre, :prompt => ' ') %>
+    </div>
+<!--    <div class="field">
+      Impuesto Específico<br />
+      <%= f.collection_select(:impesp, Impesp.all, :impesp, :impesp, :prompt => ' ') %>
+      <%#= f.text_field :impesp %>
+    </div>
+    <div class="field">
+      Inicia<br />
+      <%= f.text_field :per1_on %>
+    </div>
+    <div class="field">
+      Final<br />
+      <%= f.text_field :per2_on, :value => '11/08/2012' %>
+    </div>
+    <div class="field">
+      <%= f.label :importe %><br />
+      <%= f.number_field :importe %>
+    </div>
+    <div class="field">
+      <%= f.label :tramite %><br />
+      <%= f.collection_select(:tramite, Tramite.all, :descripc, :tramite, :prompt => ' ') %>
+      <%#= f.text_field :tramite_id %>
+    </div>
+
+    <div class="field">
+      Fecha de Ingreso<br />
+      <%= f.text_field :ingreso_on %>
+    </div>
+    <div class="field">
+      Fecha Estimada de Devolución<br />
+      <%= f.text_field :devest_on %>
+    </div>-->
+    <div class="field">
+      Socio<br />
+      <%#= f.text_field :usu_socio %>
+      <%= f.collection_select(:usu_socio, Usuario.all, :usuario, :nombrecompleto, :prompt => ' ') %>
+    </div>
+    <div class="field">
+      Gerente<br />
+      <%#= f.text_field :usu_gerente %>
+      <%= f.collection_select(:usu_gerente, Usuario.all, :usuario, :nombrecompleto, :prompt => ' ') %>
+    </div>
+    <div class="field">
+      Senior<br />
+      <%#= f.text_field :usu_senior %>
+      <%= f.collection_select(:usu_senior, Usuario.all, :usuario, :nombrecompleto, :prompt => ' ') %>
+    </div>
+    <div class="field">
+      Junior<br />
+      <%#= f.text_field :usu_junior %>
+      <%= f.collection_select(:usu_junior, Usuario.all, :usuario, :nombrecompleto, :prompt => ' ') %>
+    </div>
+
+<!--    <div class="field">
+      <%= f.label :honorarios %><br />
+      <%= f.number_field :honorarios %>
+    </div>
+    <div class="field">
+      Factura<br />
+      <%= f.text_field :factura %>
+    </div>
+    <div class="field">
+      Facturado<br />
+      <%= f.text_field :factura_on %>
+    </div>-->
+    <div class="field">
+      <%= radio_button_tag 'gender', 'male' %> Todas
+      <%= radio_button_tag 'gender', 'male2' %> Activas
+      <%= radio_button_tag 'gender', 'malex' %> Concluidas
+    </div>
+    <div class="field">
+      <%= radio_button_tag 'genderx', 'male' %> Todas
+      <%= radio_button_tag 'genderx', 'male2' %> Facturadas
+      <%= radio_button_tag 'genderx', 'malex' %> No Facturadas
+    </div>
+    <br>
+    <br>
+    <div class="actions">
+      <%= f.submit "Buscar Solicitudes" %>
+    </div>
+<% end %>

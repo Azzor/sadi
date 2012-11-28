@@ -1,0 +1,29 @@
+<h1>Tipos de Trámite de Devolución</h1>
+
+<%= link_to 'Agregar Tipo de Trámite', new_tramite_path %>
+<br />
+<br />
+
+<table>
+  <tr>
+    <th>Tramite</th>
+    <th>Descripc</th>
+    <th>Plazo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tramites.each do |tramite| %>
+  <tr>
+    <td><%= tramite.tramite %></td>
+    <td><%= tramite.descripc %></td>
+    <td><%= tramite.plazo %></td>
+    <td><%#= link_to 'Show', tramite %></td>
+    <td><%= link_to 'Editar', edit_tramite_path(tramite) %></td>
+    <td><%= link_to 'Baja', tramite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+

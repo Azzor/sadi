@@ -1,0 +1,2 @@
+module RequerimsHelper
+end

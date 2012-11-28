@@ -1,0 +1,21 @@
+<%= form_for(@gruemp) do |f| %>
+  <% if @gruemp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gruemp.errors.count, "error") %> prohibited this gruemp from being saved:</h2>
+
+      <ul>
+      <% @gruemp.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Agregar' %>
+  </div>
+<% end %>

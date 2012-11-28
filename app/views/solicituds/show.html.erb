@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b># Solicitud:</b>
+  <%= @solicitud.id %>
+</p>
+<p>
+  <b>Cliente:</b>
+  <%= @solicitud.cliente %>
+</p>
+
+<p>
+  <b>Impuesto Específico:</b>
+  <%= @solicitud.impesp %>
+</p>
+
+<p>
+  <b>Inicio:</b>
+  <%= @solicitud.per1_on %>
+</p>
+
+<p>
+  <b>Final:</b>
+  <%= @solicitud.per2_on %>
+</p>
+
+<p>
+  <b>Importe:</b>
+  <%= @solicitud.importe %>
+</p>
+
+<p>
+  <b>Tramite:</b>
+  <%= @solicitud.tramite %>
+</p>
+
+<p>
+  <b>Ingreso:</b>
+  <%= @solicitud.ingreso_on %>
+</p>
+
+<p>
+  <b>Fecha Estimada de Devolución:</b>
+  <%= @solicitud.devest_on %>
+</p>
+
+<p>
+  <b>Socio:</b>
+  <%= @solicitud.usu_socio %>
+</p>
+
+<p>
+  <b>Gerente:</b>
+  <%= @solicitud.usu_gerente %>
+</p>
+
+<p>
+  <b>Senior:</b>
+  <%= @solicitud.usu_senior %>
+</p>
+
+<p>
+  <b>Junior:</b>
+  <%= @solicitud.usu_junior %>
+</p>
+
+
+<%= link_to 'Edit', edit_solicitud_path(@solicitud) %> |
+<%= link_to 'Back', solicituds_path %>

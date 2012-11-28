@@ -1,0 +1,102 @@
+<p>
+  <b># Solicitud:</b>
+  <%= @solicitud.id %>
+</p>
+<p>
+  <b>Cliente:</b>
+  <%= @solicitud.cliente %>
+</p>
+
+<p>
+  <b>Impuesto Específico:</b>
+  <%= @solicitud.impesp %>
+</p>
+
+<p>
+  <b>Inicio:</b>
+  <%= @solicitud.per1_on %>
+</p>
+
+<p>
+  <b>Final:</b>
+  <%= @solicitud.per2_on %>
+</p>
+
+<p>
+  <b>Importe:</b>
+  <%= @solicitud.importe %>
+</p>
+
+<p>
+  <b>Tramite:</b>
+  <%= @solicitud.tramite %>
+</p>
+
+<p>
+  <b>Ingreso:</b>
+  <%= @solicitud.ingreso_on %>
+</p>
+
+<p>
+  <b>Fecha Estimada de Devolución:</b>
+  <%= @solicitud.devest_on %>
+</p>
+
+<p>
+  <b>Socio:</b>
+  <%= @solicitud.usu_socio %>
+</p>
+
+<p>
+  <b>Gerente:</b>
+  <%= @solicitud.usu_gerente %>
+</p>
+
+<p>
+  <b>Senior:</b>
+  <%= @solicitud.usu_senior %>
+</p>
+
+<p>
+  <b>Junior:</b>
+  <%= @solicitud.usu_junior %>
+</p>
+
+<br />
+<br />
+
+
+
+<h3>Requerimientos</h3>
+
+<%= link_to 'Agregar Requerimiento', :action => "new", :ns => @solicitud.id %>
+<br />
+<br />
+
+<table>
+  <tr>
+    <th># Req</th>
+    <th>Notificado</th>
+    <th>Asunto</th>
+    <th>Vencimiento</th>
+    <th>Fch Respuesta</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @requerims.each do |requerim| %>
+  <tr>
+    <td><%= requerim.nrequerim %></td>
+    <td><%= requerim.notif_on %></td>
+    <td><%= requerim.asunto %></td>
+    <td><%= requerim.venc_on %></td>
+    <td><%= requerim.resp_on %></td>
+    <td><%#= link_to 'Show', requerim %></td>
+    <td><%= link_to 'Editar', edit_requerim_path(requerim) %></td>
+    <td><%= link_to 'Baja', requerim, method: :delete, data: { confirm: 'Esta Seguro?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+

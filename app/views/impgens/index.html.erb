@@ -1,0 +1,24 @@
+<h1>Catálogo de Impuestos Genéricos</h1>
+
+<%= link_to 'Agregar Impuesto Genérico', new_impgen_path %>
+<br />
+<br />
+
+<table>
+  <tr>
+    <th>Impuesto Genérico</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @impgens.each do |impgen| %>
+  <tr>
+    <td><%= impgen.impgen %></td>
+    <td><%#= link_to 'Mostrar', impgen %></td>
+    <td><%= link_to 'Editar', edit_impgen_path(impgen) %></td>
+    <td><%= link_to 'Baja', impgen, method: :delete, data: { confirm: 'Está Seguro?' } %></td>
+  </tr>
+<% end %>
+</table>
+

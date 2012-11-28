@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nrequerim:</b>
+  <%= @requerim.nrequerim %>
+</p>
+
+<p>
+  <b>Notif on:</b>
+  <%= @requerim.notif_on %>
+</p>
+
+<p>
+  <b>Asunto:</b>
+  <%= @requerim.asunto %>
+</p>
+
+<p>
+  <b>Venc on:</b>
+  <%= @requerim.venc_on %>
+</p>
+
+<p>
+  <b>Resp on:</b>
+  <%= @requerim.resp_on %>
+</p>
+
+
+<%= link_to 'Edit', edit_requerim_path(@requerim) %> |
+<%= link_to 'Back', requerims_path %>

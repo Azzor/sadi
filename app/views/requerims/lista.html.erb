@@ -1,0 +1,34 @@
+
+<h3>Requerimientos</h3>
+
+<%= link_to 'Agregar Requerimiento', :action => "new", :ns => @solicitud.id %>
+<br />
+<br />
+
+<table>
+  <tr>
+    <th># Req</th>
+    <th>Notificado</th>
+    <th>Asunto</th>
+    <th>Vencimiento</th>
+    <th>Fch Respuesta</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @requerims.each do |requerim| %>
+      <tr>
+        <td><%= requerim.nrequerim %></td>
+        <td><%= requerim.notif_on %></td>
+        <td><%= requerim.asunto %></td>
+        <td><%= requerim.venc_on %></td>
+        <td><%= requerim.resp_on %></td>
+        <td><%#= link_to 'Show', requerim %></td>
+        <td><%= link_to 'Editar', edit_requerim_path(requerim) %></td>
+        <td><%= link_to 'Baja', requerim, method: :delete, data: { confirm: 'Esta Seguro?' } %></td>
+      </tr>
+  <% end %>
+</table>
+
+

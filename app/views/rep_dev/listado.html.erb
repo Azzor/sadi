@@ -1,0 +1,49 @@
+<h1>Administración de Solicitudes de Devolución de Impuestos</h1>
+
+<%#= link_to 'Agregar Solicitud', new_solicitud_path %>
+<br />
+<br />
+
+<table>
+  <tr>
+    <th># Solicitud</th>
+    <th>Cliente</th>
+    <th>Imp Esp</th>
+    <th>Fech Ini</th>
+    <th>Fech fin</th>
+    <th>Importe</th>
+    <th>Tramite</th>
+    <th>Ingreso</th>
+    <th>Dev Est</th>
+    <th>Socio</th>
+    <th>Gerente</th>
+    <th>Senior</th>
+    <th>Junior</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @solicituds.each do |solicitud| %>
+      <tr>
+        <td><%= solicitud.id %></td>
+        <td><%= solicitud.cliente %></td>
+        <td><%= solicitud.impesp %></td>
+        <td><%= solicitud.per1_on %></td>
+        <td><%= solicitud.per2_on %></td>
+        <td><%= solicitud.importe %></td>
+        <td><%= solicitud.tramite %></td>
+        <td><%= solicitud.ingreso_on %></td>
+        <td><%= solicitud.devest_on %></td>
+        <td><%= solicitud.usu_socio %></td>
+        <td><%= solicitud.usu_gerente %></td>
+        <td><%= solicitud.usu_senior %></td>
+        <td><%= solicitud.usu_junior %></td>
+        <td><%#= link_to 'Show', solicitud %></td>
+        <td><%#= link_to 'Editar', edit_solicitud_path(solicitud) %></td>
+        <td><%#= link_to 'Baja', solicitud, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= link_to 'Detalle', {:controller => 'requerims', :action => 'index', :ns => solicitud.id} %></td>
+        <td><%#= link_to 'Show', solicitud %></td>
+      </tr>
+  <% end %>
+</table>

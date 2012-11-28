@@ -1,0 +1,27 @@
+<%= form_for(@impesp) do |f| %>
+  <% if @impesp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@impesp.errors.count, "error") %> prohibited this impesp from being saved:</h2>
+
+      <ul>
+      <% @impesp.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="field">
+      Impuesto Especifico<br />
+      <%= f.text_field :impesp %>
+    </div>
+    <div class="field">
+      Impuesto Genérico<br />
+      <%= f.collection_select(:impgen_id, Impgen.all, :id, :impgen, :prompt => ' ') %>
+      <%#= f.text_field :impgen %>
+    </div>
+
+  <div class="actions">
+    <%= f.submit 'Agregar' %>
+  </div>
+<% end %>

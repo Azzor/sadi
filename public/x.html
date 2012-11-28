@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Sistema de Administración de Devoluciones de Impuestos (SADI) | Admin Area</title>
+    <meta name="author" content="Jesus Garcia">
+    <link href="/assets/public.css?body=1" media="all" rel="stylesheet" type="text/css" />
+    <link href="/assets/admin.css?body=1" media="all" rel="stylesheet" type="text/css" />
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js" type="text/javascript"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+    <meta content="cM0vtM4yUu7f4Nh05iwgZhWvPuze3mUasf5Ijs3nOag=" name="csrf-token" />
+    <script type="text/javascript">
+        $(function (){
+            $('#solicitud_per1_on').datepicker();
+            $('#solicitud_per2_on').datepicker();
+        });
+    </script>
+</head>
+<body>
+<div id="header">
+    <h1>Sistema de Administración de Devoluciones de Impuestos (SADI)</h1>
+</div>
+<div id="main">
+<div id="content">
+<h1>Agregar Solicitud</h1>
+
+<form accept-charset="UTF-8" action="/solicituds" class="new_solicitud" id="new_solicitud" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="cM0vtM4yUu7f4Nh05iwgZhWvPuze3mUasf5Ijs3nOag=" /></div>
+
+<div class="field">
+    <label for="solicitud_cliente">Cliente</label><br />
+    <select id="solicitud_cliente" name="solicitud[cliente]"><option value=""> </option>
+        <option value="A12343">JESUS GARCIA</option>
+        <option value="A3221">ALICIA SOLANO</option>
+        <option value="Cliente 1">Nombre 1</option></select>
+</div>
+<div class="field">
+    Impuesto Específico<br />
+    <select id="solicitud_impesp" name="solicitud[impesp]"><option value=""> </option>
+        <option value="Impuesto AB">Impuesto AB</option>
+        <option value="Impuesto CC">Impuesto CC</option>
+        <option value="Impuesto DD">Impuesto DD</option></select>
+</div>
+<div class="field">
+    Inicia<br />
+    <input id="solicitud_per1_on" name="solicitud[per1_on]" size="30" type="text" />
+</div>
+<div class="field">
+    Final<br />
+    <input id="solicitud_per2_on" name="solicitud[per2_on]" size="30" type="text" />
+</div>
+<div class="field">
+    <label for="solicitud_importe">Importe</label><br />
+    <input id="solicitud_importe" name="solicitud[importe]" type="number" />
+</div>
+<div class="field">
+    <label for="solicitud_tramite">Tramite</label><br />
+    <select id="solicitud_tramite" name="solicitud[tramite]"><option value=""> </option>
+        <option value="Tramite 1111111111111111111">Tramite 1</option>
+        <option value="Tramite 222222222222222222">Tramite 2</option></select>
+</div>
+
+<div class="field">
+    Fecha de Ingreso<br />
+    <select id="solicitud_ingreso_on_3i" name="solicitud[ingreso_on(3i)]">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option selected="selected" value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+    </select>
+    <select id="solicitud_ingreso_on_2i" name="solicitud[ingreso_on(2i)]">
+        <option value="1">Enero</option>
+        <option value="2">Febrero</option>
+        <option value="3">Marzo</option>
+        <option value="4">Abril</option>
+        <option value="5">Mayo</option>
+        <option value="6">Junio</option>
+        <option value="7">Julio</option>
+        <option value="8">Agosto</option>
+        <option value="9">Septiembre</option>
+        <option value="10">Octubre</option>
+        <option selected="selected" value="11">Noviembre</option>
+        <option value="12">Diciembre</option>
+    </select>
+    <select id="solicitud_ingreso_on_1i" name="solicitud[ingreso_on(1i)]">
+        <option value="2007">2007</option>
+        <option value="2008">2008</option>
+        <option value="2009">2009</option>
+        <option value="2010">2010</option>
+        <option value="2011">2011</option>
+        <option selected="selected" value="2012">2012</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+    </select>
+
+</div>
+<div class="field">
+    Fecha Estimada de Devolución<br />
+    <select id="solicitud_devest_on_3i" name="solicitud[devest_on(3i)]">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option selected="selected" value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+    </select>
+    <select id="solicitud_devest_on_2i" name="solicitud[devest_on(2i)]">
+        <option value="1">Enero</option>
+        <option value="2">Febrero</option>
+        <option value="3">Marzo</option>
+        <option value="4">Abril</option>
+        <option value="5">Mayo</option>
+        <option value="6">Junio</option>
+        <option value="7">Julio</option>
+        <option value="8">Agosto</option>
+        <option value="9">Septiembre</option>
+        <option value="10">Octubre</option>
+        <option selected="selected" value="11">Noviembre</option>
+        <option value="12">Diciembre</option>
+    </select>
+    <select id="solicitud_devest_on_1i" name="solicitud[devest_on(1i)]">
+        <option value="2007">2007</option>
+        <option value="2008">2008</option>
+        <option value="2009">2009</option>
+        <option value="2010">2010</option>
+        <option value="2011">2011</option>
+        <option selected="selected" value="2012">2012</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+    </select>
+
+</div>
+<div class="field">
+    Socio<br />
+    <select id="solicitud_usu_socio" name="solicitud[usu_socio]"><option value=""> </option>
+        <option value="AROD">Rodriguez Rodriguez Alex</option>
+        <option value="VINNY">Castilla  Vinicio</option></select>
+</div>
+<div class="field">
+    Gerente<br />
+    <select id="solicitud_usu_gerente" name="solicitud[usu_gerente]"><option value=""> </option>
+        <option value="AROD">Rodriguez Rodriguez Alex</option>
+        <option value="VINNY">Castilla  Vinicio</option></select>
+</div>
+<div class="field">
+    Senior<br />
+    <select id="solicitud_usu_senior" name="solicitud[usu_senior]"><option value=""> </option>
+        <option value="AROD">Rodriguez Rodriguez Alex</option>
+        <option value="VINNY">Castilla  Vinicio</option></select>
+</div>
+<div class="field">
+    Junior<br />
+    <select id="solicitud_usu_junior" name="solicitud[usu_junior]"><option value=""> </option>
+        <option value="AROD">Rodriguez Rodriguez Alex</option>
+        <option value="VINNY">Castilla  Vinicio</option></select>
+</div>
+
+<div class="field">
+    <label for="solicitud_honorarios">Honorarios</label><br />
+    <input id="solicitud_honorarios" name="solicitud[honorarios]" type="number" />
+</div>
+<div class="field">
+    Factura<br />
+    <input id="solicitud_factura" name="solicitud[factura]" size="30" type="text" />
+</div>
+<div class="field">
+    Facturado<br />
+    <select id="solicitud_factura_on_3i" name="solicitud[factura_on(3i)]">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option selected="selected" value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+    </select>
+    <select id="solicitud_factura_on_2i" name="solicitud[factura_on(2i)]">
+        <option value="1">Enero</option>
+        <option value="2">Febrero</option>
+        <option value="3">Marzo</option>
+        <option value="4">Abril</option>
+        <option value="5">Mayo</option>
+        <option value="6">Junio</option>
+        <option value="7">Julio</option>
+        <option value="8">Agosto</option>
+        <option value="9">Septiembre</option>
+        <option value="10">Octubre</option>
+        <option selected="selected" value="11">Noviembre</option>
+        <option value="12">Diciembre</option>
+    </select>
+    <select id="solicitud_factura_on_1i" name="solicitud[factura_on(1i)]">
+        <option value="2007">2007</option>
+        <option value="2008">2008</option>
+        <option value="2009">2009</option>
+        <option value="2010">2010</option>
+        <option value="2011">2011</option>
+        <option selected="selected" value="2012">2012</option>
+        <option value="2013">2013</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+    </select>
+
+</div>
+<div class="actions">
+    <input name="commit" type="submit" value="Create Solicitud" />
+</div>
+</form>
+
+<a href="/solicituds">Back</a>
+
+</div>
+</div>
+<div id="footer">
+    <p id="copyright">&copy; </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cliente: 
+  impesp: 
+  per1_on: 
+  per2_on: 
+  importe: 
+  tramite_id: 
+  ingreso_on: 
+  devest_on: 
+  usu_socio: 
+  usu_gerente: 
+  usu_senior: 
+  usu_junior: 1
+
+two:
+  cliente: 
+  impesp: 
+  per1_on: 
+  per2_on: 
+  importe: 
+  tramite_id: 
+  ingreso_on: 
+  devest_on: 
+  usu_socio: 
+  usu_gerente: 
+  usu_senior: 
+  usu_junior: 1

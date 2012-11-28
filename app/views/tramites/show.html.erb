@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tramite:</b>
+  <%= @tramite.tramite %>
+</p>
+
+<p>
+  <b>Descripc:</b>
+  <%= @tramite.descripc %>
+</p>
+
+<p>
+  <b>Plazo:</b>
+  <%= @tramite.plazo %>
+</p>
+
+
+<%= link_to 'Edit', edit_tramite_path(@tramite) %> |
+<%= link_to 'Back', tramites_path %>

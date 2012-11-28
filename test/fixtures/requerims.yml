@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nrequerim: 
+  notif_on: 
+  asunto: 
+  venc_on: 
+  resp_on: 2012-11-09
+
+two:
+  nrequerim: 
+  notif_on: 
+  asunto: 
+  venc_on: 
+  resp_on: 2012-11-09

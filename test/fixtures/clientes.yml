@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cliente: 
+  nombre: 
+  gruemp_id: 
+  contacto: 
+  telefono: 
+  email: MyString
+
+two:
+  cliente: 
+  nombre: 
+  gruemp_id: 
+  contacto: 
+  telefono: 
+  email: MyString

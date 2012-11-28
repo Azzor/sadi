@@ -1,0 +1,21 @@
+<%= form_for(@impgen) do |f| %>
+  <% if @impgen.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@impgen.errors.count, "error") %> prohibited this impgen from being saved:</h2>
+
+      <ul>
+      <% @impgen.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :impgen %><br />
+    <%= f.text_field :impgen %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Agregar' %>
+  </div>
+<% end %>

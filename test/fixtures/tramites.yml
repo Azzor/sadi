@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tramite: 
+  descripc: 
+  plazo: 1
+
+two:
+  tramite: 
+  descripc: 
+  plazo: 1
