@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Sadi::Application.config.secret_token = 'ee56a3f6c0dbcffb713a9365707716e2ffdca25f3901517af285640a63961bac5751f6e0363d7f71867dac7d2f61188c4a81394715071e8f6c6c72e8af0dd4fc'
+Sadi::Application.config.secret_token = 'eac9eb803e7f870222138ec0903f685510057b3c25e6f4db79b4cf44590f72c0654c25e77db5fa9acabb384b5ca758aec14901f6fffbf8816471c61104c5c099'

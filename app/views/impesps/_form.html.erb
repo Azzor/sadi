@@ -12,16 +12,16 @@
   <% end %>
 
     <div class="field">
-      Impuesto Especifico<br />
-      <%= f.text_field :impesp %>
+      Impuesto Especifico
+      <%= f.text_field :impesp, :class=>"txt" %>
     </div>
     <div class="field">
-      Impuesto Genérico<br />
-      <%= f.collection_select(:impgen_id, Impgen.all, :id, :impgen, :prompt => ' ') %>
+      Impuesto Genérico
+      <%= f.collection_select(:impgen_id, Impgen.all, :id, :impgen, :prompt => ' ', :class=>"txt") %>
       <%#= f.text_field :impgen %>
     </div>
 
   <div class="actions">
-    <%= f.submit 'Agregar' %>
+    <%= f.submit :class => "btn-action btn-primary" %>
   </div>
 <% end %>

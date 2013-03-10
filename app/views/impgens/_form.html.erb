@@ -12,10 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :impgen %><br />
-    <%= f.text_field :impgen %>
+    <%= f.label :impgen %>
+    <%= f.text_field :impgen, :class=>"txt" %>
   </div>
   <div class="actions">
-    <%= f.submit 'Agregar' %>
+    <%= f.submit :class => "btn-action btn-primary" %>
   </div>
 <% end %>

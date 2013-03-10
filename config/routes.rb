@@ -7,23 +7,15 @@ Sadi::Application.routes.draw do
   get "rep_dev/listado"
 
   resources :requerims
-
   resources :solicituds
-
   resources :usuarios
-
-  root :to => 'access#menu'
-
   resources :tramites
-
   resources :impesps
-
   resources :impgens
-
-  resources :gruemps
-
+  resources :grupos
   resources :clientes
 
+  root :to => 'access#menu'
 
 
   # The priority is based upon order of creation:
@@ -83,3 +75,4 @@ Sadi::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   match ':controller(/:action(/:id))(.:format)'
 end
+

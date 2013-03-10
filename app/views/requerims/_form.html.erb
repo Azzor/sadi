@@ -18,25 +18,25 @@
     <%= f.hidden_field :solicitud_id %>
   <div class="field">
     # Requerimiento<br />
-    <%= f.text_field :nrequerim, :size => 10 %>
+    <%= f.text_field :nrequerim, :size => 10, :class=>"txt" %>
   </div>
   <div class="field">
     Notificado<br />
-    <%= f.text_field :notif_on %>
+    <%= f.text_field :notif_on, :class=>"txt" %>
   </div>
   <div class="field">
     <%= f.label :asunto %><br />
-    <%= f.text_field :asunto, :size => 60%>
+    <%= f.text_field :asunto, :size => 6, :class=>"txt" 0%>
   </div>
   <div class="field">
     Vencimiento<br />
-    <%= f.text_field :venc_on %>
+    <%= f.text_field :venc_on, :class=>"txt" %>
   </div>
   <div class="field">
     Respuesta<br />
-    <%= f.text_field :resp_on %>
+    <%= f.text_field :resp_on, :class=>"txt" %>
   </div>
   <div class="actions">
-    <%= f.submit 'Agregar' %>
+    <%= f.submit :class => "btn-action btn-primary" %>
   </div>
 <% end %>

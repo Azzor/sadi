@@ -12,34 +12,34 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :usuario %><br />
-    <%= f.text_field :usuario, :size => 10 %>
+    <%= f.label :usuario %>
+    <%= f.text_field :usuario, :size => 10, :class=>"txt" %>
   </div>
   <div class="field">
-    Apellido Paterno<br />
-    <%= f.text_field :apepat, :size => 20 %>
+    Apellido Paterno
+    <%= f.text_field :apepat, :size => 20, :class=>"txt" %>
   </div>
   <div class="field">
-    Apellido Materno<br />
-    <%= f.text_field :apemat, :size => 20 %>
+    Apellido Materno
+    <%= f.text_field :apemat, :size => 20, :class=>"txt" %>
   </div>
   <div class="field">
-    <%= f.label :nombre %><br />
-    <%= f.text_field :nombre, :size => 25 %>
+    <%= f.label :nombre %>
+    <%= f.text_field :nombre, :size => 25, :class=>"txt" %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, :size => 50 %>
+    <%= f.label :email %>
+    <%= f.email_field :email, :size => 50, :class=>"txt" %>
   </div>
   <div class="field">
-    Contraseña<br />
-    <%= f.password_field :password, :size => 20 %>
+    Contraseña
+    <%= f.password_field :password, :size => 20, :class=>"txt" %>
   </div>
   <div class="field">
-    Repetir Contraseña<br />
-    <%= f.password_field :password, :size => 20 %>
+    Repetir Contraseña
+    <%= f.password_field :password, :size => 20, :class=>"txt" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => "btn-action btn-primary" %>
   </div>
 <% end %>

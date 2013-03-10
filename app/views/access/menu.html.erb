@@ -1,16 +1,16 @@
 <% @page_title = "Admin Menu" %>
 
 <div class="menu">
-  <h2> Menu</h2>
+  <h2> </h2>
   <div class="identity">Usuario: <%= session[:usuario] %></div>
   <ul>
     <li><%= link_to("Grupos Empresariales", :controller => 'gruemps') %></li>
     <li><%= link_to("Clientes", :controller => 'clientes') %></li>
-    <li><%= link_to("Catálogo de Personal", :controller => 'usuarios') %></li>
+    <li><%= link_to("Personal", :controller => 'usuarios') %></li>
     <li><%= link_to("Catálogos de Impuestos y Trámites", 'access/menuit') %></li>
 
     <br>
-    <li><%= link_to("Solicitudes de Devolución de Impuestos", :controller => 'solicituds') %></li>
+    <li><%= link_to("Administracion de Solicitudes de Devolución de Impuestos", :controller => 'solicituds') %></li>
     <br>
     <br>
     <li><%= link_to("Reporte de Solicitudes de Devolución", :controller => 'rep_dev', :action => 'busca') %></li>

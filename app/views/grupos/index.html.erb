@@ -1,0 +1,21 @@
+<h1>Catálogo de Grupos Empresariales</h1>
+
+<%= link_to( '+ Agregar Grupo', new_grupo_path, :class => "btn-action btn-primary") %>
+
+<table id="tabla-rayada">
+  <tr>
+    <th>Nombre</th>
+    <th></th>
+    <th></th>
+   </tr>
+
+<% @grupos.each do |grupo| %>
+      <tr class="lcliente">
+    <td><%= grupo.nombre %></td>
+    <td><span class="manage-list-notes do_not_print">(<%= link_to 'Editar', edit_grupo_path(grupo) %>  |
+     <%= link_to 'Baja', grupo, method: :delete, data: { confirm: 'Are you sure?' } %>)</span></td>
+  </tr>
+<% end %>
+</table>
+
+

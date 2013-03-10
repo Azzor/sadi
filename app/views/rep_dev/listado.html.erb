@@ -1,8 +1,9 @@
-<h1>Administración de Solicitudes de Devolución de Impuestos</h1>
+<h1>Listado Encontrado de Solicitudes</h1>
 
 <%#= link_to 'Agregar Solicitud', new_solicitud_path %>
 <br />
 <br />
+<br><br>Query = <%= @cccquery %>
 
 <table>
   <tr>
@@ -47,3 +48,5 @@
       </tr>
   <% end %>
 </table>
+
+<br> <%= link_to 'Ir al Inicio', :controller => 'access' %>

@@ -1,12 +1,10 @@
-<h1>Listado de Clientes</h1>
+<h1>Catálogo de Clientes</h1>
 
-
-<%= link_to 'Agregar Cliente', new_cliente_path %>
-<br />
+<%= link_to( '+ Agregar Cliente', new_cliente_path, :class => "btn-action btn-primary") %>
 <br />
 
-<table>
-  <tr>
+<table id="tabla-rayada">
+  <tr class="titulo">
     <th>Cliente</th>
     <th>Nombre</th>
     <th>GrupoEmp</th>
@@ -15,24 +13,23 @@
     <th>Email</th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
 <% @clientes.each do |cliente| %>
-  <tr>
+  <tr class="lcliente">
     <td><%= cliente.cliente %></td>
     <td><%= cliente.nombre %></td>
-    <td><%= cliente.gruemp_id %></td>
+    <td><%= cliente.grupo_id %></td>
     <td><%= cliente.contacto %></td>
     <td><%= cliente.telefono %></td>
     <td><%= cliente.email %></td>
     <td><%#= link_to 'Mostrar', cliente %></td>
-    <td><%= link_to 'Editar', edit_cliente_path(cliente) %></td>
-    <td><%= link_to 'Baja', cliente, method: :delete, data: { confirm: 'Está Seguro?' } %></td>
+    <td><span class="manage-list-notes do_not_print">(<%= link_to 'Editar', edit_cliente_path(cliente) %>  |
+      <%= link_to 'Baja', cliente, method: :delete, data: { confirm: 'Está Seguro?' } %>)</span></td>
   </tr>
 <% end %>
 </table>
 
-
+<br> <%= link_to 'Ir al Inicio', :controller => 'access' %>
 
 

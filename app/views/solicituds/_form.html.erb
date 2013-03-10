@@ -12,75 +12,68 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :cliente %><br />
-    <%#= f.text_field :cliente %>
+    <%= f.label :cliente %>
     <%= f.collection_select(:cliente, Cliente.all, :cliente, :nombre, :prompt => ' ') %>
   </div>
   <div class="field">
-    Impuesto Específico<br />
+    Impuesto Específico
     <%= f.collection_select(:impesp, Impesp.all, :impesp, :impesp, :prompt => ' ') %>
-    <%#= f.text_field :impesp %>
   </div>
   <div class="field">
-    Inicia<br />
-    <%= f.text_field :per1_on %>
+    Inicia
+    <%= f.text_field :per1_on, :class=>"txt" %>
   </div>
   <div class="field">
-    Final<br />
-    <%= f.text_field :per2_on, :value => '11/08/2012' %>
+    Final
+    <%= f.text_field :per2_on, :value => '11/08/2012', :class=>"txt" %>
   </div>
   <div class="field">
-    <%= f.label :importe %><br />
-    <%= f.number_field :importe %>
+    <%= f.label :importe %>
+    <%= f.number_field :importe, :class=>"txt" %>
   </div>
   <div class="field">
-    <%= f.label :tramite %><br />
+    <%= f.label :tramite %>
     <%= f.collection_select(:tramite, Tramite.all, :descripc, :tramite, :prompt => ' ') %>
-    <%#= f.text_field :tramite_id %>
   </div>
 
   <div class="field">
-    Fecha de Ingreso<br />
-    <%= f.text_field :ingreso_on %>
+    Fecha de Ingreso
+    <%= f.text_field :ingreso_on, :class=>"txt" %>
   </div>
   <div class="field">
-    Fecha Estimada de Devolución<br />
-    <%= f.text_field :devest_on %>
+    Fecha Estimada de Devolución
+    <%= f.text_field :devest_on, :class=>"txt" %>
   </div>
   <div class="field">
-    Socio<br />
-    <%#= f.text_field :usu_socio %>
-    <%= f.collection_select(:usu_socio, Usuario.all, :usuario, :nombrecompleto, :prompt => ' ') %>
+    Socio
+    <%= f.collection_select(:usu_socio, Usuario.all, :usuario, :nombrecompleto, :prompt => ' ', :class=>"txt") %>
   </div>
   <div class="field">
-    Gerente<br />
-    <%#= f.text_field :usu_gerente %>
-    <%= f.collection_select(:usu_gerente, Usuario.all, :usuario, :nombrecompleto, :prompt => ' ') %>
+    Gerente
+    <%= f.collection_select(:usu_gerente, Usuario.all, :usuario, :nombrecompleto, :prompt => ' ', :class=>"txt") %>
   </div>
   <div class="field">
-    Senior<br />
-    <%#= f.text_field :usu_senior %>
-    <%= f.collection_select(:usu_senior, Usuario.all, :usuario, :nombrecompleto, :prompt => ' ') %>
+    Senior
+    <%= f.collection_select(:usu_senior, Usuario.all, :usuario, :nombrecompleto, :prompt => ' ', :class=>"txt") %>
   </div>
   <div class="field">
-    Junior<br />
-    <%#= f.text_field :usu_junior %>
-    <%= f.collection_select(:usu_junior, Usuario.all, :usuario, :nombrecompleto, :prompt => ' ') %>
+    Junior
+    <%= f.collection_select(:usu_junior, Usuario.all, :usuario, :nombrecompleto, :prompt => ' ', :class=>"txt") %>
   </div>
 
     <div class="field">
-      <%= f.label :honorarios %><br />
-      <%= f.number_field :honorarios %>
+      <%= f.label :honorarios %>
+      <%= f.number_field :honorarios, :class=>"txt" %>
     </div>
     <div class="field">
-      Factura<br />
-      <%= f.text_field :factura %>
+      Factura
+      <%= f.text_field :factura, :class=>"txt" %>
     </div>
     <div class="field">
-      Facturado<br />
-      <%= f.text_field :factura_on %>
+      Facturado
+      <%= f.text_field :factura_on, :class=>"txt" %>
     </div>
   <div class="actions">
-    <%= f.submit 'Agregar' %>
+    <%= f.submit :class => "btn-action btn-primary" %>
   </div>
 <% end %>

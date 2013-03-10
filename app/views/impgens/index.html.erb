@@ -1,24 +1,23 @@
 <h1>Catálogo de Impuestos Genéricos</h1>
 
-<%= link_to 'Agregar Impuesto Genérico', new_impgen_path %>
-<br />
+<%= link_to( '+ Agregar Impuesto Genérico', new_impgen_path, :class => "btn-action btn-primary") %>
 <br />
 
 <table>
-  <tr>
+  <tr class="titulo">
     <th>Impuesto Genérico</th>
-    <th></th>
     <th></th>
     <th></th>
   </tr>
 
 <% @impgens.each do |impgen| %>
-  <tr>
+  <tr class="lcliente">
     <td><%= impgen.impgen %></td>
     <td><%#= link_to 'Mostrar', impgen %></td>
-    <td><%= link_to 'Editar', edit_impgen_path(impgen) %></td>
-    <td><%= link_to 'Baja', impgen, method: :delete, data: { confirm: 'Está Seguro?' } %></td>
+    <td><span class="manage-list-notes do_not_print">(<%= link_to 'Editar', edit_impgen_path(impgen) %>
+      <%= link_to 'Baja', impgen, method: :delete, data: { confirm: 'Está Seguro?' } %>)</span></td>
   </tr>
 <% end %>
 </table>
 
+<br> <%= link_to 'Ir al Inicio', :controller => 'access' %>

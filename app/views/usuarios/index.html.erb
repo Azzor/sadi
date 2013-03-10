@@ -1,11 +1,11 @@
 <h1>Catálogo de Personal</h1>
 
-<%= link_to 'Agregar Empleado', new_usuario_path %>
-<br />
+
+<%= link_to( '+ Agregar Empleado', new_usuario_path, :class => "btn-action btn-primary") %>
 <br />
 
-<table>
-  <tr>
+<table id="tabla-rayada">
+  <tr class="titulo">
     <th>Usuario</th>
     <th>Apellido Paterno</th>
     <th>Apellido Materno</th>
@@ -13,21 +13,20 @@
     <th>Email</th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
 <% @usuarios.each do |usuario| %>
-  <tr>
+  <tr class="lcliente">
     <td><%= usuario.usuario %></td>
     <td><%= usuario.apepat %></td>
     <td><%= usuario.apemat %></td>
     <td><%= usuario.nombre %></td>
     <td><%= usuario.email %></td>
     <td><%#= link_to 'Show', usuario %></td>
-    <td><%= link_to 'Editar', edit_usuario_path(usuario) %></td>
-    <td><%= link_to 'Baja', usuario, method: :delete, data: { confirm: 'Está Seguro?' } %></td>
+    <td><span class="manage-list-notes do_not_print">(<%= link_to 'Editar', edit_usuario_path(usuario) %> |
+     <%= link_to 'Baja', usuario, method: :delete, data: { confirm: 'Está Seguro?' } %>)</span></td>
   </tr>
 <% end %>
 </table>
 
-
+<br> <%= link_to 'Ir al Inicio', :controller => 'access' %>
