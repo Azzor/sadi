@@ -1,7 +1,7 @@
 <%= form_for(@requerim) do |f| %>
   <% if @requerim.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@requerim.errors.count, "error") %> prohibited this requerim from being saved:</h2>
+      <h2><%= pluralize(@requerim.errors.count, "error") %> no permitieron grabar los datos del Requerimiento:</h2>
 
       <ul>
       <% @requerim.errors.full_messages.each do |msg| %>

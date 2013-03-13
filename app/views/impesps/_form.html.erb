@@ -1,7 +1,7 @@
 <%= form_for(@impesp) do |f| %>
   <% if @impesp.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@impesp.errors.count, "error") %> prohibited this impesp from being saved:</h2>
+      <h2><%= pluralize(@impesp.errors.count, "error") %> no permitieron grabar ImpuestosEspeciales:</h2>
 
       <ul>
       <% @impesp.errors.full_messages.each do |msg| %>

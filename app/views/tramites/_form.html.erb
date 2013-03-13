@@ -1,7 +1,7 @@
 <%= form_for(@tramite) do |f| %>
   <% if @tramite.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@tramite.errors.count, "error") %> prohibited this tramite from being saved:</h2>
+      <h2><%= pluralize(@tramite.errors.count, "error") %> no permitieron grabar los datos del Tramite:</h2>
 
       <ul>
       <% @tramite.errors.full_messages.each do |msg| %>

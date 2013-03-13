@@ -1,8 +1,9 @@
 class Cliente < ActiveRecord::Base
   attr_accessible :cliente, :contacto, :email, :grupo_id, :nombre, :telefono
 
-  validates_presence_of :cliente
-  validates_uniqueness_of :cliente
+  validates_presence_of :cliente, :message => 'no puede estar en blanco'
+  validates_presence_of :nombre, :message => 'no puede estar en blanco'
+  validates_uniqueness_of :cliente, :message => 'ya existe'
 
 
   belongs_to :grupo

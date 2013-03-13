@@ -1,7 +1,7 @@
 <%= form_for(@impgen) do |f| %>
   <% if @impgen.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@impgen.errors.count, "error") %> prohibited this impgen from being saved:</h2>
+      <h2><%= pluralize(@impgen.errors.count, "error") %> no permitieron grabar los datos del Impuesto General:</h2>
 
       <ul>
       <% @impgen.errors.full_messages.each do |msg| %>

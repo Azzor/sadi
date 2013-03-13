@@ -200,26 +200,20 @@ footer .button{margin-left:8px;vertical-align:baseline}
   font-size: 24px;
   font-weight: normal;
 }
-input.txt {
+.field input {
   color: #00008b;
   background-color: #f8f8f8;
   border: 1px inset #dadada;
   width: 200px;
 }
-select.txt {
+.field select {
   color: #00008b;
   background-color: #f8f8f8;
   border: 1px inset #dadada;
   width: 202px;
   margin:-1px 0;
 }
-form p {
-  clear: left;
-  margin: 0;
-  padding: 0;
-  padding-top: 5px;
-}
-form p label {
+.field label {
   float: left;
   width: 30%;
   background-color: #ddd;
