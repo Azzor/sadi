@@ -7,7 +7,7 @@ class GruposController < ApplicationController
 
 
   def index
-    @grupos = Grupo.all
+    @grupos = Grupo.order(:nombre)
   end
 
   def show
@@ -34,8 +34,9 @@ class GruposController < ApplicationController
   end
 
   def destroy
-    @grupo.destroy
-    #respond_with(@grupo)
+    unless @grupo.destroy
+       flash[:notice] = "No se puede borrar este grupo porque tiene clientes relacionados"
+    end
     redirect_to :action => :index
   end
 
