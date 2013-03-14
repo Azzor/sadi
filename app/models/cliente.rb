@@ -1,13 +1,16 @@
 class Cliente < ActiveRecord::Base
   attr_accessible :cliente, :contacto, :email, :grupo_id, :nombre, :telefono
 
+  set_primary_key :cliente_cliente
+
   validates_presence_of :cliente, :message => 'no puede estar en blanco'
   validates_presence_of :nombre, :message => 'no puede estar en blanco'
   validates_uniqueness_of :cliente, :message => 'ya existe'
 
 
   belongs_to :grupo
-  has_many :solicituds, :foreign_key => :cliente
+
+  has_many :solicituds, :foreign_key => :solicitud_cliente
 
   before_destroy :check_children!
 
